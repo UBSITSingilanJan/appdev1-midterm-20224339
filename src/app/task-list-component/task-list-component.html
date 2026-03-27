@@ -1,1 +1,20 @@
-<p>task-list-component works!</p>
+<h2>Tasks List</h2>
+
+<table>
+    <tbody>
+        @for (t of taskmodel; track t.id) {
+            <tr>
+               <td>{{ t.id }}</td>
+               <td>{{ t.title }}</td> 
+               <td>{{ t.description }}</td> 
+               <td>
+                <a [routerLink]="[t.id, 't-details']" class="btn-view">View</a>
+               </td> 
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="modal-container">
+    <router-outlet></router-outlet>
+</div>

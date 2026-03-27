@@ -6,9 +6,8 @@ import { TaskDetailComponent } from './task-detail-component/task-detail-compone
 import { TaskInfoComponent } from './task-info-component/task-info-component';
 import { TaskEditComponent } from './task-edit-component/task-edit-component';
 import { TaskAddComponent } from './task-add-component/task-add-component';
-import { TaskModel } from './task.model';
-import { TaskService } from './task.service';
 
 export const routes: Routes = [{path: 'app', component: AppComponent},{path: 'navbar', component: NavBarComponent},{path: 'tasklist', component: TaskListComponent},
 {path: 'taskdetail', component: TaskDetailComponent},{path: 'taskinfo', component: TaskInfoComponent},{path: 'taskedit', component: TaskEditComponent},
-{path: 'taskadd', component: TaskAddComponent}];
+{path: 'taskadd', component: TaskAddComponent},
+{path: 't-list', component: TaskListComponent, children: [{ path: ':id', children: [{ path: 't-details', component: TaskDetailComponent}]}]}];
