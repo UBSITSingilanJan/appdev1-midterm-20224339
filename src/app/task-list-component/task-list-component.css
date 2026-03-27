@@ -43,7 +43,7 @@
     background: rgba(0, 255, 255, 0.4);
   }
   
-  .modal-container:has(app-task-detail) {
+  .modal-container:has(app-task-edit) {
     position: fixed;
     top: 0;
     left: 0;
@@ -56,7 +56,7 @@
     z-index: 1000;
   }
   
-  app-task-details {
+  app-task-edit {
     display: block;
     background: #e0f7fa;
   

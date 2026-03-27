@@ -8,7 +8,7 @@
                <td>{{ t.title }}</td> 
                <td>{{ t.description }}</td> 
                <td>
-                <a [routerLink]="[t.id, 't-details']" class="btn-view">View</a>
+                <a [routerLink]="['/t-list', t.id, 't-details']" class="btn-view">View</a>
                </td> 
             </tr>
         }

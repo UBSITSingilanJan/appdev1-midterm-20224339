@@ -11,29 +11,4 @@ import { TaskInfoComponent } from '../task-info-component/task-info-component';
   templateUrl: './task-detail-component.html',
   styleUrl: './task-detail-component.css',
 })
-export class TaskDetailComponent implements OnInit {
-
-  taskmodel: TaskModel | undefined;
-
-  constructor(
-    private route: ActivatedRoute,
-    private router: Router,
-    private taskInfo: TaskInfoComponent
-  ) {}
-
-  ngOnInit(): void {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.taskmodel = this.taskInfo.getTaskById(id);
-  }
-
-  saveTask(): void {
-    if (this.taskmodel) {
-      this.taskInfo.updateTaskModel(this.taskmodel);
-      this.router.navigate(['/t-list']);
-    }
-  }
-
-  goBack(): void {
-    this.router.navigate(['/t-list']);
-  }
-}
+export class TaskDetailComponent {}

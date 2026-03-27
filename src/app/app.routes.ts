@@ -10,4 +10,4 @@ import { TaskAddComponent } from './task-add-component/task-add-component';
 export const routes: Routes = [{path: 'app', component: AppComponent},{path: 'navbar', component: NavBarComponent},{path: 'tasklist', component: TaskListComponent},
 {path: 'taskdetail', component: TaskDetailComponent},{path: 'taskinfo', component: TaskInfoComponent},{path: 'taskedit', component: TaskEditComponent},
 {path: 'taskadd', component: TaskAddComponent},
-{path: 't-list', component: TaskListComponent, children: [{ path: ':id', children: [{ path: 't-details', component: TaskDetailComponent}]}]}];
+{path: 't-list', component: TaskListComponent, children: [{ path: ':id/t-details', component: TaskEditComponent }]}];
