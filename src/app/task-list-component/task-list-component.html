@@ -8,13 +8,19 @@
                <td>{{ t.title }}</td> 
                <td>{{ t.description }}</td> 
                <td>
-                <a [routerLink]="['/t-list', t.id, 't-details']" class="btn-view">View</a>
+                <a [routerLink]="['/t-list', t.id, 't-detail']" class="btn-view">View</a>
+               </td>
+               <td>
+                <a [routerLink]="['/t-list', t.id, 't-edit']" class="btn-view">Edit</a>
                </td> 
             </tr>
         }
     </tbody>
 </table>
 
-<div class="modal-container">
+<div class="taskdetail-container">
+    <router-outlet></router-outlet>
+</div>
+<div class="taskedit-container">
     <router-outlet></router-outlet>
 </div>

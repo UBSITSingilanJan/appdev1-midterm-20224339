@@ -29,6 +29,6 @@ export class TaskListComponent implements OnInit{
 
   getTasks(t: TaskModel): void {
     this.selectedId = t.id;
-    this.router.navigate(['/t-list', t.id, 't-details']);
+    this.router.navigate(['/t-list', t.id, 't-edit']);
   }
 }
