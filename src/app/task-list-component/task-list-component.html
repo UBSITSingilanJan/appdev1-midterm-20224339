@@ -11,6 +11,9 @@
                 <a [routerLink]="['/t-list', t.id, 't-detail']" class="btn-view">View</a>
                </td>
                <td>
+                <a [routerLink]="['/t-list', t.id, 't-add']" class="btn-view">Add</a>
+               </td> 
+               <td>
                 <a [routerLink]="['/t-list', t.id, 't-edit']" class="btn-view">Edit</a>
                </td> 
             </tr>
@@ -19,8 +22,9 @@
 </table>
 
 <div class="taskdetail-container">
-    <router-outlet></router-outlet>
+</div>
+<div class="taskadd-container">
 </div>
 <div class="taskedit-container">
-    <router-outlet></router-outlet>
 </div>
+<router-outlet></router-outlet>

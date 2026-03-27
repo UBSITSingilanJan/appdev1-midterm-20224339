@@ -62,4 +62,12 @@ export class TaskInfoComponent {
     const idx = this.taskmodel.findIndex(t => t.id === updated.id);
     if (idx !== 1) this.taskmodel[idx] = {...updated};
   }
+
+  addTask(newTask: TaskModel): void {
+    const exists = this.taskmodel.some(t => t.id === newTask.id);
+    if (exists) {
+      newTask.id = this.taskmodel.length ? Math.max(...this.taskmodel.map(t => t.id)) + 1 : 1;
+    }
+    this.taskmodel.push(newTask);
+  }
 }

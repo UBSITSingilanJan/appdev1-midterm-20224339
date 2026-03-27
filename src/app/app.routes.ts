@@ -11,4 +11,5 @@ export const routes: Routes = [{path: 'app', component: AppComponent},{path: 'na
 {path: 'taskdetail', component: TaskDetailComponent},{path: 'taskinfo', component: TaskInfoComponent},{path: 'taskedit', component: TaskEditComponent},
 {path: 'taskadd', component: TaskAddComponent},
 {path: 't-list', component: TaskListComponent, children: [{ path: ':id/t-detail', component: TaskDetailComponent }]},
+{path: 't-list', component: TaskListComponent, children: [{ path: ':id/t-add', component: TaskAddComponent }]},
 {path: 't-list', component: TaskListComponent, children: [{ path: ':id/t-edit', component: TaskEditComponent }]}];
